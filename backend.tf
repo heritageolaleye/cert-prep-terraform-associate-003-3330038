@@ -5,7 +5,7 @@ terraform {
     bucket         = "terraform-demo-s3-bucket111"
     key            = "terraform-state-dir/terraform.tfstate"
     region         = "us-east-1"
-    profile        = "Helen"
+    profile        = "Adelafight"
     dynamodb_table = "dynamo-table1"
   }
 }
