@@ -44,7 +44,7 @@ data "aws_vpc" "default" {
 }
 data "aws_subnet" "default_subnet" {
   vpc_id = data.aws_vpc.default
-  availabilty_zone =  "us-east-1a"
+  availability_zone =  "us-east-1a"
 }
 
 resource "aws_instance" "ec2-instance1" {
@@ -58,12 +58,4 @@ resource "aws_instance" "ec2-instance1" {
    tags = {                                
      Name = "demo-server1"
 }
-}
-
-output "instance_public_ip" {
-  value = aws_instance.web.public_ip
-}
-
-output "pem_file_path" {
-  value = local_file.private_key.filename
 }
