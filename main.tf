@@ -43,7 +43,7 @@ data "aws_vpc" "default" {
   default = true
 }
 data "aws_subnet" "default_subnet" {
-  vpc_id = data.aws_vpc.default_subnet
+  vpc_id = data.aws_vpc.default.id
   availability_zone =  "us-east-1a"
 }
 
