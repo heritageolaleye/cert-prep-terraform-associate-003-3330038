@@ -15,7 +15,7 @@ resource "local_file" "private_key" {
 resource "aws_security_group" "web_sg" {
   name = "web-app-sg"
   description = "Allow SSH and HTTP access" 
-}
+
 ingress {
   description = "Allow SSH"
   from_port = 22
@@ -40,6 +40,7 @@ egress {
 
 tags = {
   Name = "web App Security Group"
+}
 }
 
 data "aws_vpc" "default" {
