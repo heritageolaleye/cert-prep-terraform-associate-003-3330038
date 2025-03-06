@@ -1,4 +1,4 @@
-resource "tls_private_key" "web_app_key" {
+resource "tls_private_key" "web" {
   algorithm = "RSA"
   rsa_bits = 2048
 }
@@ -35,7 +35,7 @@ egress {
   from_port = 0
   to_port = 0
   protocol = "-1"
-  cidr_blocks = ["0.0.0.0/0]
+  cidr_blocks = ["0.0.0.0/0"]
 }
 
 tags = {
