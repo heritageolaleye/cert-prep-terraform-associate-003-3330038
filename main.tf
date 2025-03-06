@@ -9,7 +9,7 @@ resource "aws_key_pair" "web_app_key_pair"{
 }
 resource "local_file" "private_key" {
   filename = "${path.module}/web-app-key.pem"
-  content = tls_private_key/web_app_key.pem
+  content = tls_private_key.web_app_key.private_key_pem
   file_permission = "0400"
 }
 resource "aws_security_group" "web_sg" {
